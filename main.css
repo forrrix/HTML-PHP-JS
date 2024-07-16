@@ -1,0 +1,49 @@
+@font-face { font-family: CherrySwash; src: url('CherrySwash-Regular.otf'); } 
+ @font-face { font-family: CherrySwashBold; font-weight: bold; src: url('CherrySwash-Bold.otf');}
+@font-face { font-family: Karla; src: url('Karla-Regular.ttf'); } 
+ @font-face { font-family: KarlaBold; font-weight: bold; src: url('Karla-Bold.ttf');}
+
+h1 {
+	font-family: CherrySwashBold;
+		font-size: 60px;
+		text-align : center;
+		color: white;
+}
+
+h2 {
+	font-family: CherrySwashBold;
+		font-size: 40px;
+		text-align : center;
+}
+
+div {
+	font-family: Karla;
+	font-size: 30px;
+}
+
+html { 
+  background: url(bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.format {
+ background-color:rgba(209, 209, 209, .95);
+
+
+ flex-direction: column;
+ margin: auto 300px auto 300px;
+
+
+
+}
+
+.flex1 {
+	flex: auto auto auto;
+}
+
+.flex2 {
+	flex: auto auto auto;
+}

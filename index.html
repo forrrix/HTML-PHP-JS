@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Outfitter Corner</title>
+  <script type="text/javascript">
+  function validate() {
+
+    let validate = true;
+    let nom = document.getElementById("nom").value;
+    let prenom = document.getElementById("prenom").value;
+    let heure = document.getElementById("heure").value;
+    let telNo = document.getElementById("telNo").value;
+
+    let date = document.getElementById("date").value;
+      let date1 = new Date(date);
+      let jour = date1.getDate();
+      var mois =date1.getMonth()+1;
+      var annee =date1.getFullYear();
+      let cetteannee = new Date;
+      let anneeCheck1 = cetteannee.getFullYear()+5;
+      let anneeCheck2 = cetteannee.getFullYear()-1;
+
+    let service = document.getElementById("choix").value; 
+
+  //-- Test du champ nom
+    if (nom == "") {
+      validate = false;
+      document.getElementById("nomLabel").style.color = "red";
+    }
+
+    if (nom.length > 35){
+     validate = false;
+     document.getElementById("nomLabel").style.color = "red";
+    }
+
+    if (isNaN(nom) == false) {
+      validate = false;
+      document.getElementById("nomLabel").style.color = "red";
+    }
+
+  //-- Test du champ prénom
+    if (prenom ==""){
+      validate = false;
+      document.getElementById("prenomLabel").style.color = "red";
+    }
+  
+    if (prenom.length >35){
+      validate = false;
+      document.getElementById("prenomLabel").style.color = "red";
+    }
+  
+    if (isNaN(prenom) == false) {
+      validate = false;
+      document.getElementById("prenomLabel").style.color = "red";
+    }
+
+  //-- Test du champ heure
+    if (heure ==""){
+      validate = false;
+      document.getElementById("heureLabel").style.color = "red";
+    }
+
+    if (heure.substring(0,2)<= 10){
+      validate  = false;
+      document.getElementById("heureLabel").style.color = "red";
+    } 
+
+    if (heure.substring(0,2) >= 19){
+      validate = false;
+      document.getElementById("heureLabel").style.color = "red";
+    }
+
+    if ((isNaN(heure.substring(0,2)) == true) || (isNaN(heure.substring(3,5)) == true)) {
+      validate = false;
+      document.getElementById("heureLabel").style.color = "red";
+    }
+
+  //-- Test du champ date 
+    if ((jour > 30) || (isNaN(jour) == true) || (isNaN(mois) == true) || (mois > 12) || (isNaN(annee) == true)) {
+      validate = false;
+      document.getElementById("dateLabel").style.color = "red";
+    }
+
+    if ((annee > anneeCheck1) || (annee <= anneeCheck2)) {
+      validate = false;
+      document.getElementById("dateLabel").style.color = "red";
+    }
+
+  //-- Test du champ Service désiré
+    service = parseInt(service);
+    if (isNaN(parseInt(service)) ) {
+      document.getElementById("choixLabel").style.color = "red";
+      validate = false;
+    }
+
+
+    if ((service <1) || (service >3)) {
+      validate = false;
+      document.getElementById("telNoLabel").style.color = "red";
+    }
+
+  //-- Test du champ Telephone
+    if (telNo == "") {
+      validate = false;
+      document.getElementById("telNoLabel").style.color = "red";
+    }
+
+    if (isNaN(telNo) == true ) {
+      validate = false;
+      document.getElementById("telNoLabel").style.color = "red";
+    }
+
+    if ((telNo.substring(0,2) != "06") && (telNo.substring(0,2) != "01")) {
+      validate = false;
+      document.getElementById("telNoLabel").style.color = "red";
+    }
+
+  //-- Si tout est ok, on valide
+    if (validate == true) {
+      document.formtest.submit();
+    }
+
+  }
+  </script>
+  <meta charset="utf-8" />
+      <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+  <header>
+      <h1>The Outfitter Corner</h1>
+    </header>
+  <div class="format">
+      <h2>Bienvenue sur notre page Click&Collect</h2>
+        <p> Merci de réserver un créneau horaire en remplissant le formulaire si dessous :</p> 
+        <form name="formtest" action="/push.php" method="post">
+      <div class="flex1">
+        <label for="nom" id="nomLabel">Nom*:</label>
+        <input type="text" id=nom    name="nom"> 
+
+        <label for="prenom"id="prenomLabel">Prénom* :</label>
+        <input type="text" id="prenom" name="prenom">
+
+        <label for="heure"id="heureLabel">Heure*:</label>
+        <input type="time" id="heure"name="heure" min="11:00" max="19:00"><small>11h à 19h</small>
+      </div>
+      <div class="flex2">
+        <label for="date"id="dateLabel">Date*:</label>
+        <input type="date" id="date" name="date">
+
+        <label for="telNo"id="telNoLabel">Téléphone*:</label>
+        <input id="telNo" name="telNo" type="tel">
+
+        <label for="choix" id="choixLabel">Service désiré*:</label>
+        <select name="choix" id="choix">
+          <option value="1">Retouche</option>
+          <option value="2">Upcycling</option>
+          <option value="3">Masques</option>
+        </select>
+      </div>
+        <input type="button" name="boutton" id="boutton" value="Envoyer" onclick="validate()">
+    </form>
+    <br><br>
+
+      <footer style="text-align: center">
+          <a href="https://moncouturierducoin.wordpress.com">Retour au site</a>
+      </footer>
+    </div>
+</body>
+</html>

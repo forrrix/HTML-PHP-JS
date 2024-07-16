@@ -1,0 +1,221 @@
+@font-face { font-family: CherrySwash; src: url('CherrySwash-Regular.otf'); } 
+ @font-face { font-family: CherrySwashBold; font-weight: bold; src: url('CherrySwash-Bold.otf');}
+@font-face { font-family: Karla; src: url('Karla-Regular.ttf'); } 
+ @font-face { font-family: KarlaBold; font-weight: bold; src: url('Karla-Bold.ttf');}
+@font-face {font-family: YouthTouch; src: url("YouthTouch.ttf");}
+
+h1 {
+	font-family: YouthTouch;
+		font-size: 100px;
+		text-align : center;
+		color: #FFFFFF;
+		margin-top: 10px;
+		margin-bottom: 1px;
+		font-weight: 1000;
+		text-shadow: 1px 1px 1rem #FFFFFF;
+}
+
+h2 {
+	font-family: CherrySwashBold;
+		font-size: 40px;
+		text-align : center;
+		color:   #ffbb33;
+}
+
+div {
+	font-family: Karla;
+}
+
+html { 
+  background: url(bg2.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+::placeholder {
+  color: #333333;
+  opacity: 1; /* Firefox */
+  font-family: CherrySwash;
+  font-weight: bold;
+}
+
+.txtcolor {
+	color: #ffbb33;
+	font-weight: bold;
+	text-shadow: 1px 1px 1px #ffbb33;
+}
+
+.format {
+ background-color:#252525;
+ opacity: 0.95;
+
+ flex-direction: column;
+ margin: auto 170px 20px 190px;
+ padding-bottom: 10px;
+}
+
+.div1 {
+	display: flex;
+	justify-content: center;
+	color:   #ffbb33;
+	flex: auto;
+	flex-wrap: wrap;
+	margin: auto 20px auto 20px;
+}
+
+
+
+.inputTxt {
+  display: flex;
+  flex: auto;
+  font-size: 20px;
+  padding: 10px;
+  margin: 3px;
+  background-color: #ffbb33;
+  font-weight: bold;
+  border-color: #252525;
+}
+
+
+
+.drop {
+	flex: auto auto auto;
+	margin-left: 23px;
+	color:   #ffbb33;
+
+}
+
+.drop2 {
+  font-size: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #ffbb33;
+  font-weight: bold;
+  border-color: #252525;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ap-dropdown-menu {
+    width: 91%;
+    background: #040404;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    margin-top: 3px;
+    overflow: hidden;
+    font-size: 30px;
+}
+
+.text1 {
+	display: flex;
+	color:   #ebebeb;
+	margin-left: 20px;
+}
+
+
+
+
+.div2 {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+
+}
+
+.file-input {
+	font-size: 10px;
+
+}
+
+.btn-primary {
+    color: #ebebeb;
+    background-color: #252525;
+    border-color: #ffbb33;
+    font-weight: bold;
+    font-family: CherrySwash;
+}
+
+.file-caption .file-caption-name {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    border: none;
+    background: #ffbb33;
+    outline: 0;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #ffbb33;
+    background-color: #ffbb33;
+    background-clip: padding-box;
+    border: 2px solid #252525;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.file-drop-zone-title {
+    color: #ffbb33;
+    font-size: 1.6em;
+    text-align: center;
+    padding: 85px 10px;
+    cursor: default;
+    font-weight: bold;
+}
+.file-drop-zone {
+    border: 1px solid #ffbb33;
+    min-height: 260px;
+    border-radius: 4px;
+    text-align: center;
+    vertical-align: middle;
+    margin: 12px 15px 12px 12px;
+    padding: 5px;
+}
+
+.file-preview {
+    border-radius: 5px;
+    border: 1px solid #252525;
+    padding: 8px;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.close {
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: 0;
+}
+
+.krajee-default.file-preview-frame .kv-file-content {
+    width: auto;
+    height: 200px;
+}
+
+.subdiv {
+	align-content: center;
+}
+.sub {
+	margin: auto;
+	display: block;
+	padding:  2px 10px 2px 10px;
+	font-weight: bold;
+	background-color: #252525;
+	color: #ebebeb;
+	border-color: #ffbb33;
+	font-family: CherrySwash;
+}
+
+
